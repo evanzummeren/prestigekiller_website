@@ -1,9 +1,22 @@
+$size: 30px;
+
 .number {
 	 display: inline-block;
-	 width: 25px;
-	 height: 25px;
-	 line-height: 25px;
+	 font-size: 12px;
+	 width: $size;
+	 height: $size;
+	 line-height: $size;
 	 text-align: center;
 	 border: 1px solid $white;
-	 border-radius: 40px;
+	 border-radius: $size;
+	 &:hover {
+	 	cursor: pointer;
+	 	color: $blue;
+		background: $white;
+	 };
+}
+
+.active {
+ 	color: $blue;
+	background: $white;
 }
