@@ -1,1 +1,51 @@
 @import "base/typography";
+@import "base/colors";
+@import "dia";
+
+body {
+	background: $blue;
+}
+
+p::selection {
+	color: $black;
+	background: $yellow;
+}
+
+h1 {
+	width: 80%;
+	margin: auto;
+	color: $white;
+}
+
+.logo {
+	width: 60px;
+	margin-left: 3%;
+}
+
+.container {
+	margin: auto;
+	display: flex;
+	width: 80%;
+}
+
+.child {
+	width: 50%;
+	margin: auto;
+	color: $white;
+}
+
+.child p {
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.child a { 
+	color: $white;
+}
+
+.button {
+	width: 200px;
+	&:hover {
+		opacity: .7;
+	};
+}
