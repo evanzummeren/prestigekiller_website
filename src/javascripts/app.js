@@ -5,17 +5,25 @@ import './modules'
 		2. numbers meebewegen
 		3. timer bij iedere numbers resetten
  **/
- 
+
 var currentSlide = 0;
 var numberSlides = document.getElementsByClassName('slide').length;
 
 function showSlide(thisSlide) {
 	for ( var i=0; i<numberSlides; i++){
 		document.getElementsByClassName('slide')[i].style.display = "none";
+		document.getElementsByClassName('number')[i].classList.remove("active");
 	}
 		document.getElementsByClassName('slide')[thisSlide].style.display = "block";	
+		document.getElementsByClassName('number')[thisSlide].classList.add("active");	
+		currentSlide++;
+
+	if(currentSlide === numberSlides){ currentSlide = 0};
 }
 
-showSlide(1);
+showSlide(0);
+
+setInterval(function(){ showSlide(currentSlide) }, 7000);
+
 
 // console.log(document.getElementsByClassName('slide')[0]);
