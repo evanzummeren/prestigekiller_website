@@ -1,14 +1,15 @@
 $size: 30px;
 
 .number {
-	 display: inline-block;
-	 font-size: 12px;
-	 width: $size;
-	 height: $size;
-	 line-height: $size;
-	 text-align: center;
-	 border: 1px solid $white;
-	 border-radius: $size;
+	display: inline-block;
+	font-size: 12px;
+	width: $size;
+	height: $size;
+	line-height: $size;
+	text-align: center;
+	border: 1px solid $white;
+	border-radius: $size;
+	transition: background 0.5s linear;	 
 	 &:hover {
 	 	cursor: pointer;
 	 	color: $blue;
@@ -19,4 +20,5 @@ $size: 30px;
 .active {
  	color: $blue;
 	background: $white;
+  transition: background 0.5s linear;
 }
