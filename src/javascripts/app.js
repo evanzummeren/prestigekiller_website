@@ -1,11 +1,5 @@
 import './modules'
 
-/** to do
-		1. timer
-		2. numbers meebewegen
-		3. timer bij iedere numbers resetten
- **/
-
 var currentSlide = 0;
 var numberSlides = document.getElementsByClassName('slide').length;
 
@@ -23,7 +17,14 @@ function showSlide(thisSlide) {
 
 showSlide(0);
 
-setInterval(function(){ showSlide(currentSlide) }, 7000);
+var diaTimer = setInterval(function(){ showSlide(currentSlide) }, 7000);
 
+for (var i=0;i<numberSlides;i++){
+		document.getElementsByClassName('number')[i].addEventListener("click", function(thisnode){
+			showSlide(thisnode.srcElement.dataset.number) // "3"
 
-// console.log(document.getElementsByClassName('slide')[0]);
+			/* Reset timer */
+			window.clearInterval(diaTimer);
+			diaTimer = setInterval(function(){ showSlide(currentSlide) }, 7000);
+	});
+}
