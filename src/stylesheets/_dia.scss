@@ -22,3 +22,40 @@ $size: 30px;
 	background: $white;
   transition: background 0.5s linear;
 }
+
+.slide:first-child {
+	background-image: url('../images/slide1.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 80%;
+	width: 100%;
+	height: 400px;
+}
+
+.slide {
+	width: 100%;
+	height: 400px;
+	text-align: center;
+}
+
+.slide__controls {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.second__slide {
+	background-image: url('../images/slide2.gif'), url('../images/slide1.gif');
+	background-repeat: no-repeat, no-repeat;
+	background-position: center, center;
+	background-size: 80%, 80%;
+}
+
+.slide__image {
+	max-width: 70%;
+}
+
+video {
+	width: 400px;
+	border-radius: 20px;
+	margin: auto;
+}

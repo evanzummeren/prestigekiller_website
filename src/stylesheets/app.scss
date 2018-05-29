@@ -14,12 +14,15 @@ p::selection {
 h1 {
 	width: 80%;
 	margin: auto;
+    margin-top: 80px;
 	color: $white;
 }
 
 .logo {
 	width: 60px;
+    margin-top: 12px;
 	margin-left: 3%;
+    position: absolute;
 }
 
 .container {
@@ -31,8 +34,12 @@ h1 {
 
 .child {
 	width: 50%;
-	margin: auto;
+	//margin: auto;
 	color: $white;
+}
+
+.child:nth-child(2n){
+  margin-top: 40px;
 }
 
 .child p {
