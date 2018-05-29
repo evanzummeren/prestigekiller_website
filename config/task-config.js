@@ -24,6 +24,11 @@ module.exports = {
   },
 
   production: {
-    rev: true
+    devtool: 'hidden-source-map',
+    uglifyJsPlugin: {
+      extractComments: true
+    },
+    plugins: (webpack) => { return [ new webpack.IgnorePlugin(/jsdom$/) ] },
+    loaders: [] // Adds to `webpackConfig.module.rules`
   }
 }
