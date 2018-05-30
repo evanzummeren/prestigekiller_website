@@ -9,13 +9,20 @@
     display: flex;
     flex-direction: row-reverse;
     width: 100%;
-    flex-wrap: wrap;
+
   }
   .child {
     width: 100% !important;
+
   }
   .child:nth-child(2n){
     margin-top: 40px;
     order: 1;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  video {
+    width: 100%
   }
 }
