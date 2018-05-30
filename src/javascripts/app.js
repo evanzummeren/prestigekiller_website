@@ -24,7 +24,7 @@ function showSlide(thisSlide) {
 
 showSlide(0);
 
-var timeDelay = 65000;
+var timeDelay = 6500;
 var diaTimer = setInterval(function(){ showSlide(currentSlide) }, timeDelay);
 
 for (var i=0;i<numberSlides;i++){
