@@ -1,0 +1,21 @@
+@media screen and (max-width: 900px) {
+  .logo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .child {
+    width: 100% !important;
+  }
+  .child:nth-child(2n){
+    margin-top: 40px;
+    order: 1;
+  }
+}
